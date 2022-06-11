@@ -1,5 +1,5 @@
 - name: Install programms
   community.general.homebrew_cask:
-    name: ["iterm2", "visual-studio-code"]
+    name: ["iterm2", "visual-studio-code", "bitwarden"]
   tags:
     - homebrew-cask
