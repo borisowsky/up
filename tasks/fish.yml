@@ -1,0 +1,14 @@
+- name: Install fish
+  community.general.homebrew:
+    name: ["fish", "fisher"]
+  tags:
+    - fish
+- name: Make fish as default shell
+  become: true
+  shell: sudo tee -a /etc/shells && chsh -s `which fish`
+  tags:
+    - fish
+- name: Install fish plugins
+  shell: '`which fish` -c "fisher install pure-fish/pure"'
+  tags:
+    - fish

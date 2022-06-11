@@ -1,0 +1,13 @@
+- hosts: localhost
+  pre_tasks:
+    - name: Update cache
+      community.general.homebrew:
+        update_homebrew: true
+        upgrade_all: true
+      tags:
+        - node
+        - cask
+  tasks:
+    - include: tasks/fish.yml
+    - include: tasks/node.yml
+    - include: tasks/homebrew-cask.yml

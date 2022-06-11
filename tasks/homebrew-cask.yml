@@ -1,0 +1,5 @@
+- name: Install programms
+  community.general.homebrew_cask:
+    name: ["iterm2", "visual-studio-code"]
+  tags:
+    - homebrew-cask
