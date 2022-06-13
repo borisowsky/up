@@ -1,13 +1,13 @@
 - name: Install nvm
-  shell: '`which fish` -c "fisher install jorgebucaran/nvm.fish"'
+  shell: $(which fish) -c "fisher install jorgebucaran/nvm.fish"
   tags:
     - fish
     - node
 - name: Setup Node.js LTS
-  shell: '`which fish` -c "nvm install lts"'
+  shell: $(which fish) -c "nvm install lts"
   tags:
     - node
 - name: Set default Node.js version
-  shell: '`which fish` -c "set --universal nvm_default_version lts"'
+  shell: $(which fish) -c "set --universal nvm_default_version lts"
   tags:
     - node

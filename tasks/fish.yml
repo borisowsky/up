@@ -9,6 +9,6 @@
   tags:
     - fish
 - name: Install fish plugins
-  shell: '`which fish` -c "fisher install pure-fish/pure"'
+  shell: $(which fish) -c "fisher install pure-fish/pure"
   tags:
     - fish
